@@ -15,7 +15,7 @@ const WeekView = () => {
       habit=habitsState[i];
     }
   }
-  
+  // JSX for Navbar
   return (
     <>
       <Navbar name="Week View" />
