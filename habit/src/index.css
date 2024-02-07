@@ -190,7 +190,7 @@ p{
   color: #812abb ;
 }
 /* ------------------------------------------------------*/
-
+/* Change color of Placeholder */
 ::placeholder {
   color: black !important;
   opacity: 1; /* Firefox */
