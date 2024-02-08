@@ -3,46 +3,45 @@ import { useDispatch } from "react-redux";
 import { habitDone, habitNone, habitUnDone } from "../redux/features/habitSlice";
 
 const DayView = ({day}) => {
-  // get today date
+ // Get today's date
   const today=new Date();
-  // get day from today date
+   // Get the day from today's date
   const todayDay=today.getDay();
 
-  // call use dispatch hook a variable call dispatch
+  // Call useDispatch hook and create a variable called dispatch
   const dispatch=useDispatch();
 
-  // get date details from providing date time
+  // Get date details from the provided date and time
   const date=new Date(day.yyyy,day.mm,day.dd);
 
-  // function call after click done icon
+  // Function called after clicking the done icon
   const markToDone=()=>{
     if(day.id>todayDay){
       alert("Sorry! You can't change your upcoming days status")
       return;
     }
-    // call habit done action from reducer
+     // Call habit done action from reducer
     dispatch(habitDone(day.id));
   }
 
-
-  // function call after click undone icon------------
+// Function called after clicking the undone icon
   const markToUnDone=()=>{
     if(day.id>todayDay){
       alert("Sorry! You can't change your upcoming days status")
       return;
     }
-    // call habit undone action from reducer
+     // Call habit undone action from reducer
     dispatch(habitUnDone(day.id))
   }
   // --------------------------------------------------
 
-  // function call after click none icon--------------
+ // Function called after clicking the none icon
   const markToNone=()=>{
     if(day.id>todayDay){
       alert("Sorry! You can't change your upcoming days status")
       return;
     }
-    // call habit none action from reducer
+    // Call habit none action from reducer
     dispatch(habitNone(day.id));
   }
   // -------------------------------------------------

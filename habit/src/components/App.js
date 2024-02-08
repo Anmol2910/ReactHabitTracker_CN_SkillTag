@@ -8,6 +8,7 @@ const App = () => {
   
   return (
     <>
+    {/* Define routes for Home and WeekView */}
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/week-view" element={<WeekView/>}/>
